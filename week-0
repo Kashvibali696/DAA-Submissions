@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int search(int a[],int n,int k)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+      
+        if(a[i]==k)
+        {
+            return i;
+
+            break;
+
+        }
+       
+    }
+     return -1;
+}
+int main(void)
+{
+int n,k;
+ cout<<"Enter size of array : ";
+cin>>n;
+cout<<"Enter element to be searched : ";
+cin>>k;
+int a[n];
+cout<<"Enter elements in an array : ";
+for(int i=0;i<n;i++)
+{
+    cin>>a[i];
+}
+int r=search(a,n,k);
+if(r==-1)
+{
+    cout<<"Elment is not present in array"<<endl;
+    cout<<" no of comparision :"<<n;
+}
+else
+{
+   cout<<"Elment is present in array at postion : "<<r<<endl; 
+    cout<<" no of comparision :"<<r+1;
+}
+
+}
